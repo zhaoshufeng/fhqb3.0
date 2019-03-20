@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ul class="tabBar">
+    <ul class="tabBar" v-if="$route.meta.showTabBar">
       <router-link to="/invest" tag="li">投资</router-link>
       <router-link to="/safe" tag="li">安全</router-link>
       <router-link to="/account" tag="li">账户</router-link>
@@ -13,9 +13,13 @@
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  export default {
+    name: 'App',
+    data(){
+      return {
+      }
+    },
+  }
 </script>
 
 <style lang="scss" scoped>
